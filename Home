@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devansh Ranadive | Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 0; text-align: center; }
+        header { padding: 50px 20px; background: #1f1f1f; }
+        h1 { margin: 0; font-size: 2.5em; color: #ff4757; }
+        p { color: #a4b0be; font-size: 1.2em; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .video-card { background: #1f1f1f; margin-bottom: 30px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .video-info { padding: 20px; text-align: left; }
+        .video-info h3 { margin: 0 0 10px 0; }
+        footer { padding: 20px; background: #1f1f1f; color: #747d8c; margin-top: 50px;}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Devansh Ranadive</h1>
+        <p>Video Editor & Content Creator</p>
+    </header>
+
+    <div class="container">
+        <h2>Featured Showreel</h2>
+        <!-- Replace the src link with your own YouTube/Vimeo embed link -->
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+                <h3>Main Showreel 2026</h3>
+                <p>A compilation of commercial edits, narrative cuts, and dynamic color grading.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Contact:
+Mail: devanshprof09@gmail.com | WhatsApp: 9328977377</p>
+    </footer>
+
+</body>
+</html>

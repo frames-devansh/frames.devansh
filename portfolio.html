@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Devansh | Video portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#dfe3e6;--ink:#15191d;--mute:#59626b;--line:#b9c0c6;--rec:#e5382b;--card:#eef0f2;
+--d:"Bricolage Grotesque",Impact,sans-serif;--b:"Instrument Sans",system-ui,sans-serif}
+@media(prefers-color-scheme:dark){:root{--bg:#14181c;--ink:#e6eaed;--mute:#98a2ab;--line:#2f373e;--card:#1c2227}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--b)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rec);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-weight:600}
+nav div{display:flex;gap:22px}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+.rec{display:inline-flex;align-items:center;gap:10px}
+.rec i{width:12px;height:12px;border-radius:50%;background:var(--rec);animation:blink 1.4s steps(1) infinite}
+@keyframes blink{50%{opacity:.15}}
+.hero{padding:7vh 0 9vh}
+.tc{font:600 15px var(--b);font-variant-numeric:tabular-nums;color:var(--mute);margin-bottom:18px}
+h1{font:800 clamp(56px,13vw,176px)/.88 var(--d);letter-spacing:-.04em}
+.sub{max-width:34ch;font-size:clamp(20px,2.4vw,28px);line-height:1.3;margin-top:28px}
+h2{font:800 clamp(34px,5vw,56px)/1 var(--d);letter-spacing:-.03em;margin-bottom:28px}
+section{padding:64px 0;border-top:2px solid var(--ink)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{font:600 15px var(--b);padding:8px 16px;border:2px solid var(--ink);background:none;color:var(--ink);border-radius:99px;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.card{all:unset;cursor:pointer;display:block}
+.card .th{aspect-ratio:16/9;background:var(--line) center/cover;position:relative;display:grid;place-items:center;overflow:hidden}
+.card .th b{font:800 64px var(--d);color:var(--bg);opacity:.6}
+.card .th::after{content:"Play";position:absolute;left:12px;bottom:12px;background:var(--rec);color:#fff;font:600 14px var(--b);padding:4px 12px;transform:translateY(160%);transition:transform .2s}
+.card:hover .th::after,.card:focus-visible .th::after{transform:none}
+.card h3{font:800 24px/1.1 var(--d);margin:12px 0 4px;letter-spacing:-.02em}
+.card p{color:var(--mute);font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.about p+p{margin-top:1em}
+dl{display:grid;gap:18px}dt{font-weight:600}dd{color:var(--mute)}
+.contact a.big{font:800 clamp(30px,6vw,76px)/1 var(--d);letter-spacing:-.03em;word-break:break-all}
+.social{display:flex;gap:22px;margin-top:24px;font-weight:600}
+footer{padding:32px 0 48px;color:var(--mute);font-size:14px}
+dialog{border:0;padding:0;max-width:min(960px,94vw);width:100%;background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.75)}
+.vid{aspect-ratio:16/9;background:#000;display:grid;place-items:center;color:#fff;text-align:center;padding:20px}
+.vid iframe{width:100%;height:100%;border:0}
+.info{padding:22px 26px 28px}
+.info h3{font:800 32px/1.1 var(--d);letter-spacing:-.02em}
+.info .meta{color:var(--mute);margin:6px 0 12px;font-weight:600}
+.x{float:right;font:600 15px var(--b);background:none;border:2px solid var(--ink);color:var(--ink);padding:6px 14px;cursor:pointer;border-radius:99px}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.rec i{animation:none}html{scroll-behavior:auto}.card .th::after{transition:none}}
+</style>
+</head>
+<body>
+<script>
+/* ============ EDIT EVERYTHING HERE ============ */
+const SITE = {
+  name: "Devansh",
+  tagline: "I shoot, edit and direct videos.",
+  location: "Mumbai, India",
+  email: "you@example.com",
+  socials: [
+    { label: "Instagram", url: "https://instagram.com/yourhandle" },
+    { label: "YouTube",   url: "https://youtube.com/@yourchannel" },
+    { label: "LinkedIn",  url: "https://linkedin.com/in/yourname" }
+  ],
+  about: [
+    "Write two or three short paragraphs about you here. Who you are, what kind of films you like making, and what you want to make next.",
+    "Add a line about how you work with clients or teams."
+  ],
+  // Label on the left, details on the right. Add or remove rows freely.
+  skills: [
+    ["Shooting",  "Cameras, lenses and lighting you use"],
+    ["Editing",   "Premiere Pro, DaVinci Resolve, After Effects"],
+    ["Directing", "Concepts, shot lists, working with actors and crews"]
+  ],
+  // video: paste a YouTube or Vimeo link. thumb: optional image URL or file name (YouTube thumbnails are automatic).
+  // roles: use any of "Shot", "Edited", "Directed" (or your own words); they become filter buttons.
+  projects: [
+    { title: "Project one",   year: "2026", client: "Client or college", roles: ["Directed","Shot","Edited"], video: "", thumb: "", blurb: "One or two sentences: the idea, what you did, and the result." },
+    { title: "Project two",   year: "2026", client: "Client or college", roles: ["Edited"],                    video: "", thumb: "", blurb: "Describe this project here." },
+    { title: "Project three", year: "2025", client: "Personal",          roles: ["Shot","Edited"],             video: "", thumb: "", blurb: "Describe this project here." },
+    { title: "Project four",  year: "2025", client: "Client or college", roles: ["Directed"],                  video: "", thumb: "", blurb: "Describe this project here." }
+  ]
+};
+/* ============ END OF EDITABLE PART ============ */
+</script>
+
+<div class="wrap">
+  <nav><span class="rec"><i></i><span id="n1"></span></span>
+    <div><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+  <header class="hero">
+    <p class="tc" id="tc" aria-hidden="true">00:00:00:00</p>
+    <h1 id="h1"></h1>
+    <p class="sub" id="tag"></p>
+  </header>
+  <section id="work"><h2>Work</h2><div class="filters" id="filters"></div><div class="grid" id="grid"></div></section>
+  <section id="about"><h2>About</h2><div class="about"><div id="bio"></div><dl id="skills"></dl></div></section>
+  <section id="contact" class="contact"><h2>Let's make something.</h2>
+    <a class="big" id="mail"></a><div class="social" id="soc"></div></section>
+  <footer id="foot"></footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="dt">
+  <div class="vid" id="vid"></div>
+  <div class="info"><button class="x" id="close">Close</button>
+    <h3 id="dt"></h3><p class="meta" id="dm"></p><p id="db"></p></div>
+</dialog>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// header / text
+document.title = SITE.name + " | Video portfolio";
+$("n1").textContent = SITE.name; $("h1").textContent = SITE.name; $("tag").textContent = SITE.tagline;
+$("bio").innerHTML = SITE.about.map(p => `<p>${esc(p)}</p>`).join("");
+$("skills").innerHTML = SITE.skills.map(([a,b]) => `<div><dt>${esc(a)}</dt><dd>${esc(b)}</dd></div>`).join("");
+$("mail").textContent = SITE.email; $("mail").href = "mailto:" + SITE.email;
+$("soc").innerHTML = SITE.socials.map(s => `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.label)}</a>`).join("");
+$("foot").textContent = `© ${new Date().getFullYear()} ${SITE.name}. ${SITE.location}.`;
+
+// video helpers
+function parseVideo(url){
+  if(!url) return null;
+  let m = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
+  if(m) return {embed:`https://www.youtube.com/embed/${m[1]}?autoplay=1&rel=0`, thumb:`https://img.youtube.com/vi/${m[1]}/hqdefault.jpg`};
+  m = url.match(/vimeo\.com\/(?:video\/)?(\d+)/);
+  if(m) return {embed:`https://player.vimeo.com/video/${m[1]}?autoplay=1`, thumb:""};
+  return null;
+}
+
+// grid + filters
+let active = "All";
+const roles = ["All", ...new Set(SITE.projects.flatMap(p => p.roles))];
+function renderFilters(){
+  $("filters").innerHTML = roles.map(r => `<button aria-pressed="${r===active}" data-r="${esc(r)}">${esc(r)}</button>`).join("");
+}
+function renderGrid(){
+  const list = SITE.projects.map((p,i)=>({p,i})).filter(({p}) => active==="All" || p.roles.includes(active));
+  $("grid").innerHTML = list.map(({p,i}) => {
+    const v = parseVideo(p.video), img = p.thumb || (v && v.thumb);
+    const style = img ? ` style="background-image:url('${esc(img)}')"` : "";
+    return `<button class="card" data-i="${i}"><div class="th"${style}>${img ? "" : `<b>${esc(p.title[0])}</b>`}</div>
+      <h3>${esc(p.title)}</h3><p>${esc(p.roles.join(", "))} · ${esc(p.year)}</p></button>`;
+  }).join("");
+}
+$("filters").addEventListener("click", e => {
+  const b = e.target.closest("button"); if(!b) return;
+  active = b.dataset.r; renderFilters(); renderGrid();
+});
+$("grid").addEventListener("click", e => {
+  const c = e.target.closest(".card"); if(!c) return;
+  const p = SITE.projects[c.dataset.i], v = parseVideo(p.video);
+  $("vid").innerHTML = v ? `<iframe src="${esc(v.embed)}" title="${esc(p.title)}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
+    : `<p>No video yet. Add a YouTube or Vimeo link to this project in the SITE settings.</p>`;
+  $("dt").textContent = p.title;
+  $("dm").textContent = `${p.client} · ${p.year} · ${p.roles.join(", ")}`;
+  $("db").textContent = p.blurb;
+  $("dlg").showModal();
+});
+const dlg = $("dlg");
+function closeDlg(){ dlg.close(); $("vid").innerHTML = ""; }
+$("close").onclick = closeDlg;
+dlg.addEventListener("click", e => { if(e.target === dlg) closeDlg(); });
+dlg.addEventListener("cancel", () => { $("vid").innerHTML = ""; });
+renderFilters(); renderGrid();
+
+// timecode counter (24 fps), the one moving thing on the page
+if(!matchMedia("(prefers-reduced-motion: reduce)").matches){
+  const t0 = performance.now(), pad = n => String(n).padStart(2,"0");
+  (function tick(){
+    const f = Math.floor((performance.now()-t0)/1000*24);
+    $("tc").textContent = [Math.floor(f/86400)%100, Math.floor(f/1440)%60, Math.floor(f/24)%60, f%24].map(pad).join(":");
+    requestAnimationFrame(tick);
+  })();
+}
+</script>
+</body>
+</html>

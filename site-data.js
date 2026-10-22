@@ -23,21 +23,21 @@ Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytellin
     ["Shooting",  "I have deep knowledge of Framing, visual composition, and capturing crisp, high-quality footage tailored for post-production workflows."]
   ],
   // The filter buttons on the Work page, in this order. Every project's "roles" must use these exact words.
-  roles: ["Directed", "Shot", "Edited", "Written"],
+  roles: ["Direction", "Videography", "Post-Production", "Copywriting"],
 
   // Projects show in THIS order on the site. Move a { ... }, block up or down to reorder.
   // year / client / blurb are optional: leave "" and they simply don't show.
   // featured: true shows it on the landing page (keep this to about 3).
   projects: [
-    { title: "Mime",               video: "https://www.youtube.com/watch?v=puEDxTdmdog", roles: ["Shot","Edited"],                         year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Avshesh",            video: "https://www.youtube.com/watch?v=jr9YhOK96qM", roles: ["Edited"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Nafrat",             video: "https://youtube.com/shorts/N_Ic_08mpuI",      roles: ["Directed","Shot","Edited","Written"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
-    { title: "Monster Ad",         video: "https://www.youtube.com/watch?v=DcyhSmbSaQ8", roles: ["Directed","Shot","Edited","Written"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
-    { title: "Always Late",        video: "https://www.youtube.com/watch?v=BRAOrLRt7gc", roles: ["Shot"],                                  year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Samay",              video: "https://www.youtube.com/watch?v=X6Dg842DThE", roles: ["Directed","Shot","Edited","Written"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
-    { title: "Leher Music Video",  video: "https://www.youtube.com/watch?v=IyZPxqupWEQ", roles: ["Edited"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Benne Ad",           video: "https://www.youtube.com/watch?v=wWMy7ykrJC8", roles: ["Directed","Shot","Edited"],              year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Disconnected",       video: "https://www.youtube.com/watch?v=6r4BrM9V-BM", roles: ["Edited"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "HTFL Promo",         video: "https://youtube.com/shorts/bSKjS9yu3bg",      roles: ["Edited"],                                year: "", client: "", thumb: "", featured: false, blurb: "" }
+    { title: "Mime",               video: "https://www.youtube.com/watch?v=puEDxTdmdog", roles: ["Shot","Post-Production"],                         year: "", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Avshesh",            video: "https://www.youtube.com/watch?v=jr9YhOK96qM", roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Nafrat",             video: "https://youtube.com/shorts/N_Ic_08mpuI",      roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
+    { title: "Monster Ad",         video: "https://www.youtube.com/watch?v=DcyhSmbSaQ8", roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
+    { title: "Always Late",        video: "https://www.youtube.com/watch?v=BRAOrLRt7gc", roles: ["Videography"],                                  year: "", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Samay",              video: "https://www.youtube.com/watch?v=X6Dg842DThE", roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
+    { title: "Leher Music Video",  video: "https://www.youtube.com/watch?v=IyZPxqupWEQ", roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Benne Ad",           video: "https://www.youtube.com/watch?v=wWMy7ykrJC8", roles: ["Direction","Videography","Post-Production"],              year: "", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Disconnected",       video: "https://www.youtube.com/watch?v=6r4BrM9V-BM", roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "HTFL Promo",         video: "https://youtube.com/shorts/bSKjS9yu3bg",      roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" }
   ]
 };

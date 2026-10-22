@@ -11,10 +11,10 @@ const SITE = {
     { label: "WhatsApp",  url: "https://wa.me/919328977377" }
   ],
   about: [
-    `Bringing Stories to Life, Frame by Frame.
-I’m a video editor and visual storyteller with a passion for turning raw concepts into compelling visual experiences. While my core expertise lies in video editing and color grading, my hands-on background in writing, directing, and shooting allows me to look at every project through a complete creative lens.
+    `Bringing the Frames and Stories in the my Mind to Life, One Frame at a Time.
+I’m a video editor and visual storyteller with a passion for turning raw concepts into compelling visual experiences. While my core expertise lies in video editing, my hands-on background in writing, directing, and shooting allows me to look at every project through a complete creative lens.
 
-Knowing how a scene is conceived on paper and captured on set gives me a deeper understanding of rhythm, pacing, and emotional impact in the edit suite. Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytelling, or building a narrative from the ground up, I focus on delivering clean, engaging, and precise visuals.`
+Knowing how a scene is coneptualized, conceived on paper and captured on set gives me a deeper understanding of rhythm, pacing, and emotional impact in the edit suite. Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytelling, or building a narrative from the ground up, I focus on delivering clean, engaging, and precise visuals.`
   ],
   skills: [
     ["Editing",   "I am Proficient in DaVinci Resolve, Basics of After Effects. I Cater videos to the liking of the client and the story"],

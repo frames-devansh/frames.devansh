@@ -6,9 +6,8 @@ const SITE = {
   email: "you@example.com",
   photo: "",                       // e.g. "me.jpg" (upload the image next to these files). Leave empty for none.
   socials: [
-    { label: "Instagram", url: "https://instagram.com/yourhandle" },
-    { label: "YouTube",   url: "https://youtube.com/@yourchannel" },
-    { label: "LinkedIn",  url: "https://linkedin.com/in/yourname" }
+    { label: "Instagram", url: "https://www.instagram.com/frames.devansh/" },
+    { label: "LinkedIn",  url: "www.linkedin.com/in/devansh-ranadive-1b8662254" }
   ],
   about: [
     "Write two or three short paragraphs about you here: who you are, the kind of films you like making, and what you want to make next.",

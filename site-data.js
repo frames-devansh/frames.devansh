@@ -7,21 +7,20 @@ const SITE = {
   photo: "",                       // e.g. "me.jpg" (upload the image next to these files). Leave empty for none.
   socials: [
     { label: "Instagram", url: "https://www.instagram.com/frames.devansh/" },
-    { label: "LinkedIn",  url: "www.linkedin.com/in/devansh-ranadive-1b8662254" }
-    { label: "WhatsApp",  "+91 9328977377" }
+    { label: "LinkedIn",  url: "https://www.linkedin.com/in/devansh-ranadive-1b8662254" },
+    { label: "WhatsApp",  url: "https://wa.me/919328977377" }
   ],
   about: [
-    "Bringing Stories to Life, Frame by Frame.
+    `Bringing Stories to Life, Frame by Frame.
 I’m a video editor and visual storyteller with a passion for turning raw concepts into compelling visual experiences. While my core expertise lies in video editing and color grading, my hands-on background in writing, directing, and shooting allows me to look at every project through a complete creative lens.
 
-Knowing how a scene is conceived on paper and captured on set gives me a deeper understanding of rhythm, pacing, and emotional impact in the edit suite. Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytelling, or building a narrative from the ground up, I focus on delivering clean, engaging, and precise visuals.
-
+Knowing how a scene is conceived on paper and captured on set gives me a deeper understanding of rhythm, pacing, and emotional impact in the edit suite. Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytelling, or building a narrative from the ground up, I focus on delivering clean, engaging, and precise visuals.`
   ],
   skills: [
-    ["Editing",   "I am Proficient in DaVinci Resolve, Basics of After Effects. I Cater videos to the liking of the client and the story"]
+    ["Editing",   "I am Proficient in DaVinci Resolve, Basics of After Effects. I Cater videos to the liking of the client and the story"],
     ["Writing",   "I mostly write short films, but I also have Experience in writing promotional reels and Advertisements."],
     ["Directing", "I Conceptualize visual hooks, structure narratives, and shape tone to keep audiences engaged."],
-    ["Shooting",  "I have deep knowledge of Framing, visual composition, and capturing crisp, high-quality footage tailored for post-production workflows."],
+    ["Shooting",  "I have deep knowledge of Framing, visual composition, and capturing crisp, high-quality footage tailored for post-production workflows."]
   ],
   // The filter buttons on the Work page, in this order. Every project's "roles" must use these exact words.
   roles: ["Directed", "Shot", "Edited", "Written"],

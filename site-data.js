@@ -31,7 +31,7 @@ Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytellin
   projects: [
     { title: "Mime",               video: "https://www.youtube.com/watch?v=puEDxTdmdog", roles: ["Shot","Edited"],                         year: "", client: "", thumb: "", featured: false, blurb: "" },
     { title: "Avshesh",            video: "https://www.youtube.com/watch?v=jr9YhOK96qM", roles: ["Edited"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Naftat",             video: "https://youtube.com/shorts/N_Ic_08mpuI",      roles: ["Directed","Shot","Edited","Written"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
+    { title: "Nafrat",             video: "https://youtube.com/shorts/N_Ic_08mpuI",      roles: ["Directed","Shot","Edited","Written"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
     { title: "Monster Ad",         video: "https://www.youtube.com/watch?v=DcyhSmbSaQ8", roles: ["Directed","Shot","Edited","Written"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
     { title: "Always Late",        video: "https://www.youtube.com/watch?v=BRAOrLRt7gc", roles: ["Shot"],                                  year: "", client: "", thumb: "", featured: false, blurb: "" },
     { title: "Samay",              video: "https://www.youtube.com/watch?v=X6Dg842DThE", roles: ["Directed","Shot","Edited","Written"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },

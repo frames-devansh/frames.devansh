@@ -12,12 +12,12 @@ const SITE = {
   ],
   about: [
     `Bringing the Frames and Stories in the my Mind to Life, One Frame at a Time.
-I’m a video editor and visual storyteller with a passion for turning raw concepts into compelling visual experiences. While my core expertise lies in video editing, my hands-on background in writing, directing, and shooting allows me to look at every project through a complete creative lens.
+I’m a video editor and visual storyteller with a passion for turning raw concepts into compelling visual experiences. While my core expertise lies in video editing and sound designing, my hands-on background in writing, directing, and shooting allows me to look at every project through a complete creative lens.
 
-Knowing how a scene is coneptualized, conceived on paper and captured on set gives me a deeper understanding of rhythm, pacing, and emotional impact in the edit suite. Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytelling, or building a narrative from the ground up, I focus on delivering clean, engaging, and precise visuals.`
+Knowing how a scene is coneptualized, conceived on paper and captured on set gives me a deeper understanding of rhythm, pacing, and emotional impact in the edit suite. Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytelling, or building a narrative from the ground up, I focus on delivering clean, immersive, engaging, and precise visuals.`
   ],
   skills: [
-    ["Editing",   "I am Proficient in DaVinci Resolve, Basics of After Effects. I Cater videos to the liking of the client and the story"],
+    ["Editing",   "I am Proficient in DaVinci Resolve and Sound designing, Basics of After Effects. I Cater videos to the liking of the client and the story"],
     ["Writing",   "I mostly write short films, but I also have Experience in writing promotional reels and Advertisements."],
     ["Directing", "I Conceptualize visual hooks, structure narratives, and shape tone to keep audiences engaged."],
     ["Shooting",  "I have deep knowledge of Framing, visual composition, and capturing crisp, high-quality footage tailored for post-production workflows."]

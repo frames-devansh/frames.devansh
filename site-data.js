@@ -1,6 +1,6 @@
 /* ============ EDIT YOUR CONTENT HERE (the only file you need to change) ============ */
 const SITE = {
-  name: "Devansh",
+  name: "frames.devansh",
   tagline: "I write, shoot, direct and edit videos.",
   location: "Mumbai, India",
   email: "devanshprof@gmail.com",

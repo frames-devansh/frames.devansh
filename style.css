@@ -64,3 +64,7 @@ dialog::backdrop{background:rgba(0,0,0,.75)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
 .tags span{font:600 13px var(--b);border:1.5px solid var(--ink);border-radius:99px;padding:1px 10px;color:var(--ink)}
 .tags em{font-style:normal;color:var(--mute);font-size:14px}
+.fx-cursor{position:fixed;top:0;left:0;z-index:9999;pointer-events:none;opacity:0;transition:opacity .2s;transform-origin:0 0;will-change:transform}
+.fx-cursor svg{display:block;filter:drop-shadow(0 0 0 transparent)}
+html.fx-hide,html.fx-hide *{cursor:none!important}
+html.fx-hide dialog,html.fx-hide dialog *{cursor:auto!important}

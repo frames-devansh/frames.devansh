@@ -16,7 +16,9 @@ A simple 4-page portfolio website for my video work: directing, shooting and edi
 ## Files
 
 ```
-index.html      Landing page
+index.html      Landing page (3D scene, built from the source zip)
+assets/         Files the landing page needs (do not edit)
+models/         3D model files for the landing page (realistic-laptop.glb, realistic-camera.glb)
 work.html       Work page
 about.html      About page
 contact.html    Contact page

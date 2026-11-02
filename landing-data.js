@@ -2,7 +2,7 @@
 window.LANDING = {
   brand: "frames.devansh",                       // top-left name
   eyebrow: "Video Editor · Filmmaker",            // small blue line above the headline
-  headline: ["Stories,", "cut", "to feel."],     // the middle word is shown in silver
+  headline: ["Stories,", "curated", "to feel."],     // the middle word is shown in silver
   scrollLabel: "Scroll ↓",
   nav: [["Work", "work.html"], ["About", "about.html"], ["Contact", "contact.html"]],
   sections: [

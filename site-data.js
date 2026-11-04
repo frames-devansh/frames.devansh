@@ -3,7 +3,7 @@ const SITE = {
   name: "frames.devansh",
   tagline: "I write, shoot, direct and edit videos.",
   location: "Mumbai, India",
-  email: "devanshprof@gmail.com",
+  email: "devanshprof09@gmail.com",
   photo: "",                       // e.g. "me.jpg" (upload the image next to these files). Leave empty for none.
   socials: [
     { label: "Instagram", url: "https://www.instagram.com/frames.devansh/" },

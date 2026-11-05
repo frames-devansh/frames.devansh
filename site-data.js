@@ -38,7 +38,6 @@ Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytellin
     { title: "Hosanna Music Video",video: "https://www.youtube.com/watch?v=Ck1-hoqCuv0&list=RDCk1-hoqCuv0&start_radio=1&pp=ygUaaG9zYW5uYSBkYW5jZSB2aWRlbyB2YXRzYWygBwE%3D", roles: ["Videography"], year: "", client: "", thumb: "", featured: false, blurb: "" },
     { title: "Leher Music Video",  video: "https://www.youtube.com/watch?v=IyZPxqupWEQ", roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
     { title: "Benne Ad",           video: "https://www.youtube.com/watch?v=wWMy7ykrJC8", roles: ["Direction","Videography","Post-Production"],              year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Disconnected",       video: "https://www.youtube.com/watch?v=6r4BrM9V-BM", roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
     { title: "HTFL Promo",         video: "https://youtube.com/shorts/bSKjS9yu3bg",      roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" }
   ]
 };

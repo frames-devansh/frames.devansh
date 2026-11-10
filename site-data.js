@@ -29,15 +29,15 @@ Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytellin
   // year / client / blurb are optional: leave "" and they simply don't show.
   // featured: true shows it on the landing page (keep this to about 3).
   projects: [
-    { title: "Mime",               video: "https://www.youtube.com/watch?v=puEDxTdmdog", roles: ["Shot","Post-Production"],                         year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Avshesh",            video: "https://www.youtube.com/watch?v=jr9YhOK96qM", roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Nafrat",             video: "https://youtube.com/shorts/N_Ic_08mpuI",      roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
-    { title: "Monster Ad",         video: "https://www.youtube.com/watch?v=DcyhSmbSaQ8", roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
-    { title: "Always Late",        video: "https://www.youtube.com/watch?v=BRAOrLRt7gc", roles: ["Videography"],                                  year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Samay",              video: "https://www.youtube.com/watch?v=X6Dg842DThE", roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "", client: "", thumb: "", featured: true,  blurb: "" },
-    { title: "Hosanna Music Video",video: "https://www.youtube.com/watch?v=Ck1-hoqCuv0&list=RDCk1-hoqCuv0&start_radio=1&pp=ygUaaG9zYW5uYSBkYW5jZSB2aWRlbyB2YXRzYWygBwE%3D", roles: ["Videography"], year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Leher Music Video",  video: "https://www.youtube.com/watch?v=IyZPxqupWEQ", roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Benne Ad",           video: "https://www.youtube.com/watch?v=wWMy7ykrJC8", roles: ["Direction","Videography","Post-Production"],              year: "", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "HTFL Promo",         video: "https://youtube.com/shorts/bSKjS9yu3bg",      roles: ["Post-Production"],                                year: "", client: "", thumb: "", featured: false, blurb: "" }
+    { title: "Mime",               video: "https://www.youtube.com/watch?v=puEDxTdmdog", roles: ["Shot","Post-Production"],                         year: "2025", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Avshesh",            video: "https://www.youtube.com/watch?v=jr9YhOK96qM", roles: ["Post-Production"],                                year: "2026", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Nafrat",             video: "https://youtube.com/shorts/N_Ic_08mpuI",      roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "2026", client: "", thumb: "", featured: true,  blurb: "" },
+    { title: "Monster Ad",         video: "https://www.youtube.com/watch?v=DcyhSmbSaQ8", roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "2026", client: "", thumb: "", featured: true,  blurb: "" },
+    { title: "Always Late",        video: "https://www.youtube.com/watch?v=BRAOrLRt7gc", roles: ["Videography"],                                  year: "2026", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Samay",              video: "https://www.youtube.com/watch?v=X6Dg842DThE", roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "2026", client: "", thumb: "", featured: true,  blurb: "" },
+    { title: "Hosanna Music Video",video: "https://www.youtube.com/watch?v=Ck1-hoqCuv0&list=RDCk1-hoqCuv0&start_radio=1&pp=ygUaaG9zYW5uYSBkYW5jZSB2aWRlbyB2YXRzYWygBwE%3D", roles: ["Videography"], year: "2026", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Leher Music Video",  video: "https://www.youtube.com/watch?v=IyZPxqupWEQ", roles: ["Post-Production"],                                year: "2026", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Benne Ad",           video: "https://www.youtube.com/watch?v=wWMy7ykrJC8", roles: ["Direction","Videography","Post-Production"],              year: "2026", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "HTFL Promo",         video: "https://youtube.com/shorts/bSKjS9yu3bg",      roles: ["Post-Production"],                                year: "2026", client: "", thumb: "", featured: false, blurb: "" }
   ]
 };

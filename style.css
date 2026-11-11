@@ -64,3 +64,14 @@ dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(4px)}
 .x{float:right;padding:7px 16px;border-color:var(--line);box-shadow:none}
 @media(max-width:760px){.about{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.card .th::after{transition:none}.card:hover{transform:none}}
+[hidden]{display:none!important}
+.info .btn{margin-top:20px}
+#csd{max-width:min(760px,94vw);max-height:88vh;overflow:auto}
+#csd .info{padding:30px 32px 34px}
+.cs-lead{font-size:18px;color:var(--silver);line-height:1.55;margin-top:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px 24px;margin:22px 0 8px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.facts dt{font:500 11px var(--b);text-transform:uppercase;letter-spacing:.2em;color:var(--hi);margin-bottom:4px}
+.facts dd{color:var(--fg);font-size:16px}
+.cs h4{font:700 20px var(--d);margin:28px 0 8px}
+.cs p{white-space:pre-line}
+.cs h4+p{color:var(--silver)}

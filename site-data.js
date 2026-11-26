@@ -36,7 +36,7 @@ Whether it’s crafting sharp, high-energy edits, fine-tuning visual storytellin
     { title: "Always Late",        video: "https://www.youtube.com/watch?v=BRAOrLRt7gc", roles: ["Videography"],                                  year: "2026", client: "", thumb: "", featured: false, blurb: "" },
     { title: "Samay",              video: "https://www.youtube.com/watch?v=X6Dg842DThE", roles: ["Direction","Videography","Post-Production","Copywriting"],    year: "2026", client: "", thumb: "", featured: true,  blurb: "" },
     { title: "Hosanna Music Video",video: "https://www.youtube.com/watch?v=Ck1-hoqCuv0&list=RDCk1-hoqCuv0&start_radio=1&pp=ygUaaG9zYW5uYSBkYW5jZSB2aWRlbyB2YXRzYWygBwE%3D", roles: ["Videography"], year: "2026", client: "", thumb: "", featured: false, blurb: "" },
-    { title: "Leher Music Video",  video: "https://www.youtube.com/watch?v=IyZPxqupWEQ", roles: ["Post-Production"],                                year: "2026", client: "", thumb: "", featured: false, blurb: "" },
+    { title: "Udd Jaa Re",  video: "https://www.youtube.com/watch?v=IyZPxqupWEQ", roles: ["Post-Production"],                                year: "2026", client: "", thumb: "", featured: false, blurb: "" },
     { title: "Benne Ad",           video: "https://www.youtube.com/watch?v=wWMy7ykrJC8", roles: ["Direction","Videography","Post-Production"],              year: "2026", client: "", thumb: "", featured: false, blurb: "" },
     { title: "HTFL Promo",         video: "https://youtube.com/shorts/bSKjS9yu3bg",      roles: ["Post-Production"],                                year: "2026", client: "", thumb: "", featured: false, blurb: "" }
   ]

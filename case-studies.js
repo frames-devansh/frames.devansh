@@ -77,8 +77,8 @@ const CASE_STUDIES = {
     ]
   },
 
-  "Leher Music Video": {
-    blurb: "A melodious music video of “Leher” by the Miras Band.",
+  "Udd Jaa Re": {
+    blurb: "A melodious music video of “Udd Jaa Re” by the Miras Band.",
     challenges: [
       ["The music video had many instruments and layers of vocals and sounds.",
        "They all had to come together as one smooth, melodious track without any abnormality. The edit had to be precise, and all the layers and instruments were listened to carefully before any video or clip was placed over them."],

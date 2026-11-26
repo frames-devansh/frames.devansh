@@ -9,6 +9,7 @@ const ROLES = SITE.roles;
 document.title = (page === "home" ? "" : document.body.dataset.title + " | ") + SITE.name + (page === "home" ? " | Video portfolio" : "");
 
 // tab icon (same on every page)
+document.head.insertAdjacentHTML("beforeend", '<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500&display=swap" rel="stylesheet">');
 document.head.insertAdjacentHTML("beforeend", '<link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="favicon.png">');
 if(!document.querySelector('script[src*="scrollbar.js"]')){ const sb = document.createElement("script"); sb.src = "scrollbar.js"; document.body.appendChild(sb); }
 

@@ -81,28 +81,29 @@ a.big{background-size:0 2px;padding-bottom:6px}a.big:hover,a.big:focus-visible{b
 
 /* ===== video pop-up that grows to show the case study ===== */
 [hidden]{display:none!important}
-dialog{overflow:auto;max-height:92vh;max-width:min(960px,94vw);transition:max-width .65s cubic-bezier(.2,.8,.2,1);scrollbar-width:thin;scrollbar-color:var(--line) transparent}
-dialog.expanded{max-width:min(1400px,96vw)}
+dialog{margin:auto;overflow:auto;max-height:92vh;max-width:min(1100px,94vw);transition:max-width .65s cubic-bezier(.2,.8,.2,1);scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+dialog.expanded{max-width:min(1580px,97vw)}
 .pop{display:grid;grid-template-columns:1fr 0px;transition:grid-template-columns .65s cubic-bezier(.2,.8,.2,1)}
-dialog.expanded .pop{grid-template-columns:1fr 440px}
+dialog.expanded .pop{grid-template-columns:1fr 480px}
 .main{min-width:0}
 .info-actions{display:flex;justify-content:flex-end;margin-top:14px}
-.info-actions .btn{margin-top:0;padding:9px 20px;font-size:12px;--ul-x:20px;--ul-y:7px}
+.info-actions .btn{margin-top:0;padding:9px 20px;font-size:12px;--ul-x:20px;--ul-y:7px;box-shadow:none;border-color:var(--line)}
+.info-actions .btn:hover,.info-actions .btn:focus-visible{box-shadow:0 0 30px -5px var(--hi);border-color:var(--hi)}
 .more{position:relative;overflow:hidden;min-width:0;border-left:1px solid transparent;transition:border-color .65s}
 dialog.expanded .more{border-left-color:var(--line)}
-.more-in{position:absolute;top:0;bottom:0;left:0;width:440px;overflow:auto;padding:28px 30px 32px;opacity:0;transition:opacity .45s .2s;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+.more-in{position:absolute;top:0;bottom:0;left:0;width:480px;overflow:auto;padding:28px 30px 32px;opacity:0;transition:opacity .45s .2s;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
 dialog.expanded .more-in{opacity:1}
 .more-in .eyebrow{margin-bottom:10px}
-.cs-lead{font-size:18px;color:var(--silver);line-height:1.5}
-.cs h4{font:700 20px var(--d);margin:26px 0 4px}
+.cs-lead{font:500 18px/1.45 var(--d);color:var(--silver)}
+.cs h4{font:700 28px/1.1 var(--d);letter-spacing:-.02em;margin:28px 0 6px}
 .chal{list-style:none;padding:0}
 .chal li{padding:18px 0;border-top:1px solid var(--line)}
 .chal .n{font:500 12px var(--b);letter-spacing:.2em;color:var(--hi)}
-.chal h5{font:700 18px/1.25 var(--d);margin:6px 0 10px}
-.how{color:var(--silver);font-size:15px;white-space:pre-line}
+.chal h5{font:700 18px/1.25 var(--d);letter-spacing:-.01em;margin:6px 0 10px}
+.how{font:500 15px/1.6 var(--d);color:var(--silver);white-space:pre-line}
 .how b{display:block;font:500 11px var(--b);text-transform:uppercase;letter-spacing:.2em;color:var(--hi);margin-bottom:4px}
 @media(max-width:999px){
-  dialog.expanded{max-width:min(960px,94vw)}
+  dialog.expanded{max-width:min(1100px,94vw)}
   .pop{grid-template-columns:1fr;grid-template-rows:auto 0fr;transition:grid-template-rows .65s cubic-bezier(.2,.8,.2,1)}
   dialog.expanded .pop{grid-template-columns:1fr;grid-template-rows:auto 1fr}
   .more{min-height:0;border-left:0;border-top:1px solid transparent}
@@ -111,3 +112,5 @@ dialog.expanded .more-in{opacity:1}
   .info{padding:18px 20px 22px}
 }
 @media(prefers-reduced-motion:reduce){dialog,.pop,.more,.more-in,.btn::after,.filters button::after,.x::after,nav div a,.social a,a.big{transition:none}}
+
+.vid{max-height:62vh}

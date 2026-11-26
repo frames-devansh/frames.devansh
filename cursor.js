@@ -24,7 +24,7 @@
   addEventListener("mousemove", e => {
     tx = e.clientX + off; ty = e.clientY + off;
     if(!shown){ x = tx; y = ty; shown = true; el.style.opacity = 1; }
-    tsc = e.target.closest && e.target.closest("a,button,.card,input,textarea,label") ? 1.15 : 1;
+    tsc = e.target.closest && e.target.closest("a,button,.card,input,textarea,label") ? 1.4 : 1;
   });
   document.addEventListener("mouseleave", () => { shown = false; el.style.opacity = 0; });
   (function loop(){

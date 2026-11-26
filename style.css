@@ -65,13 +65,49 @@ dialog::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(4px)}
 @media(max-width:760px){.about{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.card .th::after{transition:none}.card:hover{transform:none}}
 [hidden]{display:none!important}
-.info .btn{margin-top:20px}
-#csd{max-width:min(760px,94vw);max-height:88vh;overflow:auto}
-#csd .info{padding:30px 32px 34px}
 .cs-lead{font-size:18px;color:var(--silver);line-height:1.55;margin-top:14px}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:18px 24px;margin:22px 0 8px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .facts dt{font:500 11px var(--b);text-transform:uppercase;letter-spacing:.2em;color:var(--hi);margin-bottom:4px}
 .facts dd{color:var(--fg);font-size:16px}
-.cs h4{font:700 20px var(--d);margin:28px 0 8px}
-.cs p{white-space:pre-line}
-.cs h4+p{color:var(--silver)}
+
+/* ===== clickable things: underline draws in on hover (on top of the existing glow) ===== */
+nav div a,.social a,a.big{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;padding-bottom:4px;transition:background-size .35s ease,color .2s}
+nav div a:hover,nav div a:focus-visible,nav div a[aria-current],.social a:hover,.social a:focus-visible{background-size:100% 1px}
+a.big{background-size:0 2px;padding-bottom:6px}a.big:hover,a.big:focus-visible{background-size:100% 2px}
+.btn,.filters button,.x{position:relative}
+.btn::after,.filters button::after,.x::after{content:"";position:absolute;left:var(--ul-x,20px);right:var(--ul-x,20px);bottom:var(--ul-y,8px);height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.btn{--ul-x:30px;--ul-y:11px}.filters button{--ul-x:20px;--ul-y:7px}.x{--ul-x:16px;--ul-y:5px}
+.btn:hover::after,.btn:focus-visible::after,.filters button:hover::after,.filters button:focus-visible::after,.filters button[aria-pressed=true]::after,.x:hover::after,.x:focus-visible::after{transform:scaleX(1)}
+
+/* ===== video pop-up that grows to show the case study ===== */
+[hidden]{display:none!important}
+dialog{overflow:auto;max-height:92vh;max-width:min(960px,94vw);transition:max-width .65s cubic-bezier(.2,.8,.2,1);scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+dialog.expanded{max-width:min(1400px,96vw)}
+.pop{display:grid;grid-template-columns:1fr 0px;transition:grid-template-columns .65s cubic-bezier(.2,.8,.2,1)}
+dialog.expanded .pop{grid-template-columns:1fr 440px}
+.main{min-width:0}
+.info-actions{display:flex;justify-content:flex-end;margin-top:14px}
+.info-actions .btn{margin-top:0;padding:9px 20px;font-size:12px;--ul-x:20px;--ul-y:7px}
+.more{position:relative;overflow:hidden;min-width:0;border-left:1px solid transparent;transition:border-color .65s}
+dialog.expanded .more{border-left-color:var(--line)}
+.more-in{position:absolute;top:0;bottom:0;left:0;width:440px;overflow:auto;padding:28px 30px 32px;opacity:0;transition:opacity .45s .2s;scrollbar-width:thin;scrollbar-color:var(--line) transparent}
+dialog.expanded .more-in{opacity:1}
+.more-in .eyebrow{margin-bottom:10px}
+.cs-lead{font-size:18px;color:var(--silver);line-height:1.5}
+.cs h4{font:700 20px var(--d);margin:26px 0 4px}
+.chal{list-style:none;padding:0}
+.chal li{padding:18px 0;border-top:1px solid var(--line)}
+.chal .n{font:500 12px var(--b);letter-spacing:.2em;color:var(--hi)}
+.chal h5{font:700 18px/1.25 var(--d);margin:6px 0 10px}
+.how{color:var(--silver);font-size:15px;white-space:pre-line}
+.how b{display:block;font:500 11px var(--b);text-transform:uppercase;letter-spacing:.2em;color:var(--hi);margin-bottom:4px}
+@media(max-width:999px){
+  dialog.expanded{max-width:min(960px,94vw)}
+  .pop{grid-template-columns:1fr;grid-template-rows:auto 0fr;transition:grid-template-rows .65s cubic-bezier(.2,.8,.2,1)}
+  dialog.expanded .pop{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .more{min-height:0;border-left:0;border-top:1px solid transparent}
+  dialog.expanded .more{border-top-color:var(--line)}
+  .more-in{position:static;width:auto;overflow:visible;padding:22px 22px 28px}
+  .info{padding:18px 20px 22px}
+}
+@media(prefers-reduced-motion:reduce){dialog,.pop,.more,.more-in,.btn::after,.filters button::after,.x::after,nav div a,.social a,a.big{transition:none}}

@@ -10,6 +10,7 @@ document.title = (page === "home" ? "" : document.body.dataset.title + " | ") + 
 
 // tab icon (same on every page)
 document.head.insertAdjacentHTML("beforeend", '<link rel="icon" type="image/png" href="favicon.png"><link rel="apple-touch-icon" href="favicon.png">');
+if(!document.querySelector('script[src*="scrollbar.js"]')){ const sb = document.createElement("script"); sb.src = "scrollbar.js"; document.body.appendChild(sb); }
 
 // shared header + footer
 const links = [["home","index.html","Home"],["work","work.html","Work"],["about","about.html","About"],["contact","contact.html","Contact"]];
@@ -36,47 +37,71 @@ function cards(list){
   }).join("");
 }
 
-// project pop-ups: video + case study
+// project pop-up: video, with a "Know more about this" button that grows the pop-up to show the case study
 if(document.querySelector("[data-cards]")){
-  // optional case studies can live in case-studies.js (keyed by project title) or inside site-data.js
+  // case studies live in case-studies.js (keyed by project title) or inside site-data.js
   const cs = document.createElement("script"); cs.src = "case-studies.js"; document.head.appendChild(cs);
-  const caseOf = p => {
-    const c = (typeof CASE_STUDIES !== "undefined" && CASE_STUDIES[p.title]) || {};
-    return { blurb: c.blurb ?? p.blurb ?? "", facts: c.facts ?? p.facts ?? [], story: c.story ?? p.story ?? [] };
+  const norm = t => String(t).toLowerCase().replace(/[^a-z0-9]/g, "");
+  const findCase = p => {
+    if(typeof CASE_STUDIES === "undefined") return {};
+    const n = norm(p.title); let near = null;
+    for(const k of Object.keys(CASE_STUDIES)){
+      const kn = norm(k);
+      if(kn === n) return CASE_STUDIES[k];
+      if(!near && n.length >= 4 && kn.length >= 4 && (kn.includes(n) || n.includes(kn))) near = CASE_STUDIES[k];
+    }
+    return near || {};
   };
-  const hasCase = c => !!(c.blurb || c.facts.length || c.story.length);
+  const caseOf = p => { const c = findCase(p);
+    return { blurb: c.blurb ?? p.blurb ?? "", facts: c.facts ?? p.facts ?? [], story: c.story ?? p.story ?? [], challenges: c.challenges ?? p.challenges ?? [] }; };
+  const hasCase = c => !!(c.facts.length || c.story.length || c.challenges.length);
+
   document.body.insertAdjacentHTML("beforeend",
-   `<dialog id="dlg" aria-labelledby="dt"><div class="vid" id="vid"></div><div class="info"><button class="x" id="close">Close</button><h3 id="dt"></h3><p class="meta" id="dm"></p><p id="db"></p><button class="btn" id="cso" hidden>Read case study</button></div></dialog>
-    <dialog id="csd" aria-labelledby="cst"><div class="info cs"><button class="x" id="csx">Close</button><h3 id="cst"></h3><p class="meta" id="csm"></p><div id="csb"></div><button class="btn" id="csw">Watch video</button></div></dialog>`);
-  const dlg = $("dlg"), csd = $("csd");
-  const shutVideo = () => { dlg.close(); $("vid").innerHTML = ""; };
-  const shutCase = () => csd.close();
+   `<dialog id="dlg" aria-labelledby="dt"><div class="pop">
+      <div class="main"><div class="vid" id="vid"></div>
+        <div class="info"><button class="x" id="close">Close</button><h3 id="dt"></h3><p class="meta" id="dm"></p><p id="db"></p>
+          <div class="info-actions"><button class="btn" id="more-btn" aria-expanded="false" aria-controls="morein" hidden>Know more about this</button></div></div></div>
+      <div class="more" id="more"><div class="more-in cs" id="morein"></div></div>
+    </div></dialog>`);
+  const dlg = $("dlg"), btn = $("more-btn");
+  const setExpanded = on => {
+    dlg.classList.toggle("expanded", on);
+    btn.textContent = on ? "Show less" : "Know more about this";
+    btn.setAttribute("aria-expanded", String(on));
+  };
+  const shut = () => dlg.close();
   const meta = p => [sortRoles(p).join(" · "), p.client, p.year].filter(Boolean).join("  |  ");
+  const caseHTML = (p, c) => {
+    const facts = [["Role", sortRoles(p).join(", ")], ["Client", p.client], ["Year", p.year], ...c.facts].filter(f => f[1]);
+    return `<p class="eyebrow">Case study</p>` +
+      (c.blurb ? `<p class="cs-lead">${esc(c.blurb)}</p>` : "") +
+      (facts.length ? `<dl class="facts">${facts.map(([k,v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "") +
+      (c.challenges.length ? `<h4>Challenges &amp; approach</h4><ol class="chal">${c.challenges.map(([q,a], i) =>
+        `<li><span class="n">${String(i+1).padStart(2,"0")}</span><h5>${esc(q)}</h5><p class="how"><b>How I tackled it</b>${esc(a)}</p></li>`).join("")}</ol>` : "") +
+      c.story.map(([h,t]) => `<h4>${esc(h)}</h4><p class="how">${esc(t)}</p>`).join("");
+  };
   const openVideo = i => {
-    if(csd.open) shutCase();
     const p = SITE.projects[i], v = parseVideo(p.video), c = caseOf(p);
     $("vid").innerHTML = v ? `<iframe src="${esc(v.embed)}" title="${esc(p.title)}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>`
       : `<p>No video yet. Add a YouTube or Vimeo link to this project in site-data.js.</p>`;
     $("dt").textContent = p.title; $("dm").textContent = meta(p); $("db").textContent = c.blurb || "";
-    $("cso").hidden = !hasCase(c); $("cso").dataset.i = i;
-    if(!dlg.open) dlg.showModal();
+    $("morein").innerHTML = hasCase(c) ? caseHTML(p, c) : "";
+    btn.hidden = !hasCase(c);
+    setExpanded(false);
+    dlg.showModal(); dlg.scrollTo(0, 0);
   };
-  const openCase = i => {
-    const p = SITE.projects[i], c = caseOf(p);
-    if(dlg.open) shutVideo();
-    $("cst").textContent = p.title; $("csm").textContent = meta(p);
-    const facts = [["Role", sortRoles(p).join(", ")], ["Client", p.client], ["Year", p.year], ...c.facts].filter(f => f[1]);
-    $("csb").innerHTML = (c.blurb ? `<p class="cs-lead">${esc(c.blurb)}</p>` : "") +
-      (facts.length ? `<dl class="facts">${facts.map(([k,v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>` : "") +
-      c.story.map(([h,t]) => `<h4>${esc(h)}</h4><p>${esc(t)}</p>`).join("");
-    $("csw").hidden = !parseVideo(p.video); $("csw").dataset.i = i;
-    csd.showModal();
+  btn.onclick = () => {
+    const on = !dlg.classList.contains("expanded");
+    setExpanded(on);
+    $("morein").scrollTop = 0;
+    if(matchMedia("(max-width: 999px)").matches){   // stacked layout: bring the case study into view
+      if(on) setTimeout(() => dlg.scrollTo({top: $("more").offsetTop - 64, behavior: "smooth"}), 300);
+      else dlg.scrollTo({top: 0, behavior: "smooth"});
+    }
   };
-  $("close").onclick = shutVideo; $("csx").onclick = shutCase;
-  $("cso").onclick = e => openCase(e.currentTarget.dataset.i);
-  $("csw").onclick = e => openVideo(e.currentTarget.dataset.i);
-  for(const d of [dlg, csd]) d.addEventListener("click", e => { if(e.target === d){ d === dlg ? shutVideo() : shutCase(); } });
-  dlg.addEventListener("cancel", () => { $("vid").innerHTML = ""; });
+  $("close").onclick = shut;
+  dlg.addEventListener("click", e => { if(e.target === dlg) shut(); });
+  dlg.addEventListener("close", () => { $("vid").innerHTML = ""; setExpanded(false); });
   document.addEventListener("click", e => { const c = e.target.closest(".card"); if(c) openVideo(c.dataset.i); });
 }
 
